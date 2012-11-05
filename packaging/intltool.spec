@@ -5,13 +5,12 @@ License:        GPL-2.0+
 Summary:        Internationalization Tool Collection
 Url:            https://edge.launchpad.net/intltool/
 Group:          Development/Tools/Other
-Source:         %{name}-%{version}.tar.bz2
+Source:         %{name}-%{version}.tar.gz
 BuildRequires:  perl-XML-Parser
 Requires:       gettext-tools
 Requires:       perl-XML-Parser
 Provides:       xml-i18n-tools
 Obsoletes:      xml-i18n-tools
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 
 %description
