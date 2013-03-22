@@ -4,7 +4,7 @@ Release:        0
 License:        GPL-2.0+
 Summary:        Internationalization Tool Collection
 Url:            https://edge.launchpad.net/intltool/
-Group:          Development/Tools/Other
+Group:          Development/Tools
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:  perl-XML-Parser
 Requires:       gettext-tools
@@ -12,6 +12,7 @@ Requires:       perl-XML-Parser
 Provides:       xml-i18n-tools
 Obsoletes:      xml-i18n-tools
 BuildArch:      noarch
+Requires:       perl-XML-Parser
 
 %description
 Some scripts to support translators working on GNOME and similar
@@ -34,7 +35,7 @@ make check
 
 %files
 %defattr(-, root, root)
-%doc COPYING
+%license COPYING
 %defattr(-, root, root)
 %{_bindir}/intltool-*
 %{_bindir}/intltoolize
