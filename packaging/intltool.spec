@@ -6,6 +6,7 @@ Summary:        Internationalization Tool Collection
 Url:            https://edge.launchpad.net/intltool/
 Group:          Development/Tools
 Source:         %{name}-%{version}.tar.gz
+Source1001: 	intltool.manifest
 BuildRequires:  perl-XML-Parser
 Requires:       gettext-tools
 Requires:       perl-XML-Parser
@@ -22,6 +23,7 @@ information is written back into the XML files.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure
@@ -34,6 +36,7 @@ make check
 %make_install
 
 %files
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %license COPYING
 %defattr(-, root, root)
