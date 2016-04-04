@@ -26,6 +26,9 @@ information is written back into the XML files.
 cp %{SOURCE1001} .
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 %configure
 make %{?_smp_mflags}
 
